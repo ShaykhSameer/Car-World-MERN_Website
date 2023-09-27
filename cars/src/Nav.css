@@ -1,0 +1,82 @@
+body{
+  min-height: 70vh;
+  box-sizing: border-box;
+}
+
+
+header {
+  position: fixed;
+ 
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.6s, padding 0.6s;
+  padding: 20px 50px; /* Adjust padding */
+  z-index: 1000;
+  background-color: transparent; /* Set initial background color */
+}
+
+/* Navigation styles */
+header ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 2px;
+}
+
+header ul li {
+  margin: 0 15px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 2px;
+  transition: color 0.4s; /* Smooth color transition */
+}
+
+header ul li a:hover {
+  color: #ff9900; /* Change color on hover */
+}
+
+/* Sticky header styles */
+header.sticky {
+  background-color: black; /* Change background color when sticky */
+  padding: 10px 100px; /* Adjust padding when sticky */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow when sticky */
+}
+
+/* Animation for header appearance */
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the header */
+header.animate {
+  animation: fadeInDown 0.6s ease-in-out;
+}
+
+.logo {
+  display: inline-block;
+  margin-right: 20px; /* Adjust the margin as needed */
+}
+
+/* Style the logo image */
+.logo img {
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+

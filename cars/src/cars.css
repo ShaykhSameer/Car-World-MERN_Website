@@ -1,0 +1,163 @@
+.cars-page {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+
+  .header-container3 {
+    background-image: url('../src/images/car7.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    position: relative;
+  }
+
+  .main{
+    color: black;
+  }
+  
+  .header-container3::before {
+    content: "";
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .header-content3 {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* Text color */
+    z-index: 1; /* Place the content above the gradient layer */
+  }
+  
+  .header-content3 h1 {
+    font-size: 60px;
+    font-weight: bold;
+  
+  }
+  .header-content3 p{
+  font-size: 40px;
+  }
+  .header-content3 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .header-content3 a {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    width: fit-content;
+  }
+  
+  
+  
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .car-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .car-card {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    margin-top: 50px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    max-width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .car-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .car-card img {
+    max-width: 100%;
+    height: auto;
+    width: 100%; /* Set the image width to 100% */
+    max-height: 200px; /* Set the maximum image height */
+    animation: fadeIn 1s ease;
+  }
+  
+  .button-container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+  }
+  
+  .skew-button3 {
+    background-color: #021c37;
+    color: #fff;
+    width: 100px;
+    height: 50px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  
+  .skew-button3:hover {
+    background-color: #2980b9;
+    transform: skewX(10deg) scale(1.05);
+  }
+  
+  .skew-button3:active {
+    transform: skewX(-10deg) scale(0.95);
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

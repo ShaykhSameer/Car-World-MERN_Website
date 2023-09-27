@@ -1,0 +1,47 @@
+.login-box {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #261a29;
+
+  text-align: center;
+  align-items: center;
+  margin-top: 40px;
+  position: relative; 
+}
+
+.login-box:before {
+  
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #e0419b, #3ea6e9, #1c3d6d);
+  z-index: -1;
+  border-radius: 15px; 
+}
+
+.login-box input[type="email"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+.login-box h1{
+  color: white;
+}
+.login-box button {
+  background-color: #0b1e57;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.login-box{
+  color: #fff;
+}

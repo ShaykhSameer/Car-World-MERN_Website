@@ -1,0 +1,155 @@
+/* CSS design for your media-block-card */
+.media-block-card {
+  background-color: #261a29;
+  border-radius: 20px;
+  padding: 40px; /* Increase the padding to increase the height */
+  max-width: 100%;
+  margin: 0 auto;
+  border: 2px solid #1c3d6d;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+
+/* Hover effect for the card */
+.media-block-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the title */
+.h2 {
+  font-size: 24px;
+  margin-bottom: 50px;
+  color: #fff;
+  font-weight: bolder;
+}
+
+/* Style the paragraphs */
+p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+/* Style the button container */
+.row {
+  display: flex;
+  align-items: center; /* Vertically center align items in the row */
+}
+
+/* Style the text column */
+.column:first-child {
+  flex: 1;
+  padding-right: 20px; /* Add some space between the text and image */
+}
+
+/* Style the image column */
+.column:last-child {
+  flex: 1;
+}
+
+/* Style the image to fit within its container */
+.image img {
+  max-width: 700px;
+  height: 300px;
+  display: block;
+  opacity: 0.7;
+  margin-right: 40px;
+  border-radius: 20px;
+}
+
+
+
+/* Style for the video container */
+.contact-container1{
+  display: flex;
+  justify-content: space-between;
+}
+
+.video-container1 {
+  flex: 1;
+  padding: 20px;
+  max-width: 700px;
+  height: 200px;
+  opacity: 0.7;
+  margin-top: -100px; /* Adjust this value to move the video up */
+}
+
+
+.contact-video1{
+  max-width: 100%;
+  height: auto;
+  margin-top: 80px;
+  border-radius: 20px;
+  
+}
+.h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 20px; 
+  text-align: center;
+  font-weight: bolder;
+ margin-right: 200px ;
+}
+
+/* Unordered list (bullet points) styling */
+.ul {
+  list-style-type: disc;
+ /* Adjust the left margin as needed */
+  color: #fff;
+}
+
+/* List item styling */
+.ul li {
+  font-size: 18px;
+  margin-bottom: 10px; 
+  margin-top: 50px;
+ 
+}
+
+
+.contact-container5{
+  display: flex;
+  flex-direction: row-reverse; /* Reverse the order of elements */
+  align-items: center;
+}
+
+.video-container2 {
+  max-width: 500px;
+  height: 200px;
+  opacity: 0.7;
+  margin-top: -190px;
+}
+
+
+.contact-video2 {
+  width: 100%; /* Adjust the width to fit the container */
+  height: auto;
+  border-radius: 8px;
+}
+
+
+.container1{
+  background-color: #261a29;
+  border-radius: 20px;
+ 
+  border: 10px solid transparent;
+  padding: 60px; /* Increase the padding to increase the height */
+  text-align:right;
+  height: 400px;
+  max-width: 100%;
+  margin: 0 auto;
+  border-image: linear-gradient(45deg,  #e0419b, #3ea6e9, #1c3d6d) 1;
+  border-image-slice: 1;
+  color: #fff;
+}
+
+.img-holder{
+
+  width: 70px;
+  height: 700px;
+  margin-top: -200px;
+
+}
+

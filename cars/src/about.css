@@ -1,0 +1,174 @@
+body {
+  background-color: black;
+  margin: 0; 
+  padding: 0; 
+}
+
+.header-container2 {
+  background-image: url('../src/images/car5.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.header-container2::before {
+  content: "";
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.header-content2 {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff; 
+  z-index: 1; 
+}
+
+.header-content2 h1 {
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.header-content2 p {
+  font-size: 40px;
+}
+
+/* Style the header image */
+.header-content2 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Style the header link/button */
+.header-content2 a {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+  width: fit-content;
+}
+
+/* Style the container for the mission card and value cards */
+.card-container1 {
+  text-align: center;
+  margin-bottom: 70px;
+  margin-top: 200px;
+  padding: 40px;
+}
+
+
+.card1 {
+  background-color: #261a29;
+  border-radius: 20px;
+  border: 10px solid transparent;
+  padding: 60px; /* Increase the padding to increase the height */
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-image: linear-gradient(45deg,  #e0419b, #3ea6e9, #1c3d6d) 1;
+  border-image-slice: 1;
+}
+
+.card1 h2 {
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: #fff; 
+  margin-top: 20px;
+
+}
+
+.card1 p {
+  font-size: 18px;
+  color: #fff; 
+}
+
+
+.heading {
+
+  color: #fff;
+  font-weight: bold;
+  margin-top: 200px;
+
+}
+.value-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 200px;
+  margin-top: 100px;
+  margin-right: 50px;
+  margin-left: 50px;
+  gap: 40px;
+  width: 1200px;
+  height: 350px;
+}
+
+.card2 {
+  
+  flex: 0 0 calc(33.33% - 20px); /* Set a fixed width and add some margin */
+  padding: 20px;
+  margin: 0 10px; /* Add margin to create spacing between the cards */
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+  animation: slideFromLeft 1s ease-in-out forwards;
+}
+
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.card2:hover {
+  transform: scale(1.05);
+}
+.card1 {
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease; /* Add box-shadow to the transition */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card1:hover {
+  transform: scale(1.05); /* Increase the card size on hover */
+  opacity: 1; /* Show the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a pop shadow on hover */
+}
+
+.card1 {
+  transform: scale(0.95); /* Initial scale to 95% */
+  opacity: 0; /* Hide the card initially */
+  animation: fadeInScale 0.5s ease 0.2s both; /* Use fadeInScale animation */
+}
+
+@keyframes fadeInScale {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

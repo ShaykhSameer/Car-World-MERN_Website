@@ -1,0 +1,46 @@
+.signup-box {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #261a29;
+
+  text-align: center;
+  align-items: center;
+  margin-top: 100px;
+  position: relative; /* Add this for pseudo-element */
+}
+
+.signup-box:before {
+  
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #e0419b, #3ea6e9, #1c3d6d);
+  z-index: -1;
+  border-radius: 15px; /* Adjust as needed */
+}
+
+.signup-box input[type="text"],
+.signup-box input[type="email"],
+.signup-box input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.signup-box button {
+  background-color: #0b1e57;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.signup-box{
+  color: #fff;
+}
