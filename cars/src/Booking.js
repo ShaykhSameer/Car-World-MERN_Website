@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-import './Booking.css';
-import { Nav } from 'react-bootstrap';
+import ("./Booking.css")
 
 class Booking extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
+      fullName: '',
       email: '',
-      phone: '',
+      phoneNumber: '',
       carModel: '',
-      financingOption: 'cash',
+      financingOption: 'lease', // Default to 'lease'
       purchaseDate: '',
       address: '',
-      bookingConfirmed: false,
+      submitted: false,
     };
   }
 
@@ -23,113 +22,114 @@ class Booking extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    // Add logic here to handle the form submission, e.g., sending data to a server.
-
-    // Simulate a submission delay with setTimeout.
-    setTimeout(() => {
-      this.setState({ bookingConfirmed: true });
-    }, 1000); // Simulate a 1-second delay
+    // You can send the form data to your server here for processing
+    // For now, we'll just set 'submitted' to true.
+    this.setState({ submitted: true });
   };
 
   render() {
     const {
-      name,
+      fullName,
       email,
-      phone,
+      phoneNumber,
       carModel,
       financingOption,
       purchaseDate,
       address,
-      bookingConfirmed,
+      submitted,
     } = this.state;
 
     return (
-     
-      <div className="car-booking-form">
-        <h2 >Booking Form</h2>
-        {!bookingConfirmed ? (
-        
-          <form onSubmit={this.handleSubmit}>
-          <div className="form-group1">
-            <label>Name:</label>
-            <input
-              type="text"
-              name="name"
-              value={this.state.name}
-              onChange={this.handleChange}
-              required
-            />
+      <div className="booking-page">
+        <h1>Car Booking</h1>
+        {submitted ? (
+          <div className="confirmation">
+            <h2>Thank you for your booking!🎉</h2>
+            <p>Here are your details:</p>
+            <p>Full Name: {fullName}</p>
+            <p>Email: {email}</p>
+            <p>Phone Number: {phoneNumber}</p>
+            <p>Car Model: {carModel}</p>
+            <p>Financing Option: {financingOption}</p>
+            <p>Purchase Date: {purchaseDate}</p>
+            <p>Address: {address}</p>
           </div>
-          <div className="form-group1">
-            <label>Email:</label>
-            <input
-              type="email"
-              name="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-              required
-            />
-          </div>
-          <div className="form-group1">
-            <label>Phone:</label>
-            <input
-              type="tel"
-              name="phone"
-              value={this.state.phone}
-              onChange={this.handleChange}
-              required
-            />
-          </div>
-          <div className="form-group1">
-            <label>Car Model:</label>
-            <input
-              type="text"
-              name="carModel"
-              value={this.state.carModel}
-              onChange={this.handleChange}
-              required
-            />
-          </div>
-
-          <div className="form-group1">
-            <label>Purchase Date:</label>
-            <input
-              type="date"
-              name="purchaseDate"
-              value={this.state.purchaseDate}
-              onChange={this.handleChange}
-              required
-            />
-          </div>
-          <div className="form-group1">
-            <label>Customer Address:</label>
-            <textarea
-              name="address"
-              value={this.state.address}
-              onChange={this.handleChange}
-              required
-            />
-          </div>
-          <div className="form-group1">
-            <label>Financing Option:</label>
-            <select
-              name="financingOption"
-              value={this.state.financingOption}
-              onChange={this.handleChange}
-            >
-              <option value="cash">Cash</option>
-              <option value="loan">Loan</option>
-              <option value="lease">Lease</option>
-            </select>
-          </div>
-            <div className="form-group1">
-              <button type="submit">Purchase Car</button>
-            </div>
-          </form>
         ) : (
-          <div className="confirmation-message">
-            <p className='para'>Congratulations Booking Confirm 🎉</p>
-          </div>
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Full Name:
+              <input
+                type="text"
+                name="fullName"
+                value={fullName}
+                onChange={this.handleChange}
+                required
+              />
+            </label>
+            <label>
+              Email:
+              <input
+                type="email"
+                name="email"
+                value={email}
+                onChange={this.handleChange}
+                required
+              />
+            </label>
+            <label>
+              Phone Number:
+              <input
+                type="tel"
+                name="phoneNumber"
+                value={phoneNumber}
+                onChange={this.handleChange}
+                required
+              />
+            </label>
+            <label>
+              Car Model:
+              <input
+                type="text"
+                name="carModel"
+                value={carModel}
+                onChange={this.handleChange}
+                required
+              />
+            </label>
+           
+            <label>
+              Purchase Date:
+              <input
+                type="date"
+                name="purchaseDate"
+                value={purchaseDate}
+                onChange={this.handleChange}
+                required
+              />
+            </label>
+            <label>
+              Address:
+              <textarea
+                name="address"
+                value={address}
+                onChange={this.handleChange}
+                required
+              />
+               <label>
+              Financing Option:
+              <select
+                name="financingOption"
+                value={financingOption}
+                onChange={this.handleChange}
+              >
+                <option value="lease">Lease</option>
+                <option value="cash">Cash</option>
+                <option value="loan">Loan</option>
+              </select>
+            </label>
+            </label>
+            <button type="submit">Submit</button>
+          </form>
         )}
       </div>
     );
